@@ -1,6 +1,7 @@
 #A sample file for making a model to train cifar10 dataset to help you understand how to use this library.
 #Not everything is specified here.You can lookup the actual code to know more about it. 
 #Keep the CovNet.py file in the same folder as this sample file so that it can be imported here.
+#Make sure that you have a numpy with intel mkl installed otherwise the library will run pretty slow and can even cause your system to crash because of bad memory management.
 
 import CovNet as CV
 from keras.datasets import cifar10     #just to load the dataset
@@ -34,10 +35,10 @@ def main():
     output_data=np.array(trainY).reshape(total_images,1)
     input_data,output_data=CV.shuffle(input_data,output_data)     #shuffles randomly the input and output data keeping the one to one relation maintained.It takes two numpy arrays as input so make sure that the input and output data is 2 dimensional.
     
-    #uncomment if you want to train on only some data not all.
-    #input_data=input_data[0:40000]
-    #output_data=output_data[0:40000]
-    #total_images=40000
+    #As this is a sample we want to train on only some data not all.
+    input_data=input_data[0:5000]
+    output_data=output_data[0:5000]
+    total_images=5000
     
     #reshaping back after shuffling
     input_data=input_data.reshape(total_images,trainX.shape[1],trainX.shape[2],trainX.shape[3])
