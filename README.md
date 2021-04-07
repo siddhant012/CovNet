@@ -11,5 +11,5 @@ A fast, light weight, fully-featured deep learning library, written from scratch
 ###### Pre-processing tools : one-hot encoding, normalize, standardize, shuffle
 ###### Misc : Print Model Summary, Evaluation, Live training information, Gradient Checking
 
-## Sample Training Image
+## Sample Training Image on Cifar dataset
 ![conv sample-1](https://user-images.githubusercontent.com/47074790/113820820-dc31b380-9798-11eb-8682-a24cfdd627a4.JPG)
